@@ -14,3 +14,7 @@ Create list anime in txt.
     git clone https://github.com/Rikazikirin/AniLs.git
     cd AniLs
     python ls.py
+
+# How To Use
+
+ 

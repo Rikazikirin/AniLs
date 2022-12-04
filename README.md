@@ -26,7 +26,8 @@ Create list anime in txt.
 
 ![Screenshot_2022-12-04-17-56-45-23_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/102734848/205486027-b8ae30b4-e77a-4c7f-a165-559f0f780b24.jpg)
 
-![Screenshot_2022-12-04-17-57-49-37_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/102734848/205486067-2d9e5269-6edc-4dcd-9feb-a0b399782529.jpg)
+![Screenshot_2022-12-04-19-00-42-89_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/102734848/205487092-66d3cc99-9904-471c-93e0-d5ea1c7a38d2.jpg)
+
 
 - When you choose "change your last seen episode" do like this.
 

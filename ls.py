@@ -38,7 +38,7 @@ def Als():
              als.close()
     elif ls == 1:
        anime = input("\033[0;33m Append your list here: \033[0m")
-       open('lastseen.txt', 'w').writelines(anime + '\n')
+       open('lastseen.txt', 'a').writelines(anime + '\n')
     else:
         print ("\033[0;31m Are you okay?\033[0m")
 
@@ -55,7 +55,7 @@ def AC():
     enter = input("\033[0;33m press enter \033[0m")
     if enter != 0:
        completed = input("\033[0;33m enter your completed anime list here: \033[0m")
-       open('completed.txt', 'w').writelines(completed + '\n')
+       open('completed.txt', 'a').writelines(completed + '\n')
     else:
        os.system('exit')
        sys.exit()

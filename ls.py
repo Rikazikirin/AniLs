@@ -27,6 +27,7 @@ def Als():
     ls = int(input("\033[0;32m enter your number:\033[0m"))
     if ls == 2:
         with open('lastseen.txt', 'rt') as als:
+             os.system('cat lastseen.txt')
              data = als.read()
              aft = input('\033[0;33m enter anime and last seen episode: \033[0m ')
              bef = input('\033[0;33m enter your previous episode: \033[0m ')

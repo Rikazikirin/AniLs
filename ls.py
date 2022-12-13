@@ -3,7 +3,6 @@
 # IMPORT MODULE
 import sys,os
 from datetime import datetime
-from getpass import getpass
 import time
 
 # DATE AND TIME
@@ -16,9 +15,27 @@ year = now.year
 
 # Function to create list in txt
 
+def exit():
+    os.system('cls')
+    print ("""\033[0;32m You want to exit\n or you want to return?\033[0m\n""")
+    print (""" \033[0;33m   [press "ls" to last seen]
+    [press "cp" to completed]
+    [press any key to exit]\033[0m""")
+    print ('\n')
+    ex = str(input('\033[0;33myou want to return?:\033[0m '))
+    if ex == "ls":
+        return Als()
+
+    elif ex == "cp":
+        return AC()
+
+    else:
+        os.system('exit')
+        sys.exit()
+
 # If choose 1
 def Als():
-    os.system('clear')
+    os.system('cls')
     os.system('python banner2.py')
     print (now)
     print ("\n \033[0;32m choose above what you want\033[0m\n")
@@ -27,10 +44,10 @@ def Als():
     ls = int(input("\033[0;32m enter your number:\033[0m"))
     if ls == 2:
         with open('lastseen.txt', 'rt') as als:
-             os.system('cat lastseen.txt')
+             os.system('type lastseen.txt')
              data = als.read()
-             aft = input('\033[0;33m enter anime and last seen episode: \033[0m ')
-             bef = input('\033[0;33m enter your previous episode: \033[0m ')
+             aft = input('\033[0;33m enter anime and latest episode: \033[0m ')
+             bef = input('\033[0;33m enter your anime and previous episode: \033[0m ')
              data = data.replace(bef,aft)
              als.close()
 
@@ -38,16 +55,23 @@ def Als():
              als.write(data)
              als.close()
              print ("\033[0;32m Success! Your list has been update!\033[0m")
+             os.system('type lastseen.txt')
+             print ('\n')
+             time.sleep(7)
+             return exit()
     elif ls == 1:
        anime = input("\033[0;33m Append your list here: \033[0m")
        open('lastseen.txt', 'a').writelines(anime + '\n')
        print ("\033[0;32m Success! Your list has been save!\033[0m")
+       os.system('type lastseen.txt')
+       time.sleep(7)
+       return exit()
     else:
         print ("\033[0;31m Are you okay?\033[0m")
 
 # If choose 2
 def AC():
-    os.system('clear')
+    os.system('cls')
     os.system('python banner4.py')
     print (now)
     print ("""\n\n\t \t\t\033[0;36m Even if you're the main character,
@@ -60,6 +84,9 @@ def AC():
        completed = input("\033[0;33m enter your completed anime list here: \033[0m")
        open('completed.txt', 'a').writelines(completed + '\n')
        print ("\033[0;32m Success! Your list has been save!\033[0m")
+       os.system('type completed.txt')
+       time.sleep(7)
+       return exit()
     else:
        os.system('exit')
        sys.exit()
@@ -67,7 +94,7 @@ def AC():
 # Main code to run
 def main():
     global choice,lastseen,completed
-    os.system('clear')
+    os.system('cls')
     os.system('python banner3.py')
     print(now)
     print ("\n \033[0;36m enjoy your hobbies, don't think about people think and says!\033[0m\n")

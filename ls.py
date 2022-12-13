@@ -16,7 +16,7 @@ year = now.year
 # Function to create list in txt
 
 def exit():
-    os.system('cls')
+    os.system('clear')
     print ("""\033[0;32m You want to exit\n or you want to return?\033[0m\n""")
     print (""" \033[0;33m   [press "ls" to last seen]
     [press "cp" to completed]
@@ -35,7 +35,7 @@ def exit():
 
 # If choose 1
 def Als():
-    os.system('cls')
+    os.system('clear')
     os.system('python banner2.py')
     print (now)
     print ("\n \033[0;32m choose above what you want\033[0m\n")
@@ -44,7 +44,7 @@ def Als():
     ls = int(input("\033[0;32m enter your number:\033[0m"))
     if ls == 2:
         with open('lastseen.txt', 'rt') as als:
-             os.system('type lastseen.txt')
+             os.system('cat lastseen.txt')
              data = als.read()
              aft = input('\033[0;33m enter anime and latest episode: \033[0m ')
              bef = input('\033[0;33m enter your anime and previous episode: \033[0m ')
@@ -55,23 +55,24 @@ def Als():
              als.write(data)
              als.close()
              print ("\033[0;32m Success! Your list has been update!\033[0m")
-             os.system('type lastseen.txt')
-             print ('\n')
+             os.system('cat lastseen.txt')
              time.sleep(7)
              return exit()
     elif ls == 1:
        anime = input("\033[0;33m Append your list here: \033[0m")
        open('lastseen.txt', 'a').writelines(anime + '\n')
        print ("\033[0;32m Success! Your list has been save!\033[0m")
-       os.system('type lastseen.txt')
+       os.system('cat lastseen.txt')
        time.sleep(7)
        return exit()
     else:
-        print ("\033[0;31m Are you okay?\033[0m")
+       print ("\033[0;31m Are you okay?\033[0m")
+       os.system('exit')
+       sys.exit()
 
 # If choose 2
 def AC():
-    os.system('cls')
+    os.system('clear')
     os.system('python banner4.py')
     print (now)
     print ("""\n\n\t \t\t\033[0;36m Even if you're the main character,
@@ -84,7 +85,7 @@ def AC():
        completed = input("\033[0;33m enter your completed anime list here: \033[0m")
        open('completed.txt', 'a').writelines(completed + '\n')
        print ("\033[0;32m Success! Your list has been save!\033[0m")
-       os.system('type completed.txt')
+       os.system('cat completed.txt')
        time.sleep(7)
        return exit()
     else:
@@ -111,6 +112,8 @@ def main():
        open('completed.txt', 'a')
        AC()
     else:
-       print("\033[0;31m You have a something wrong in your brain\033[0m")
+        print("\033[0;31m You have a something wrong in your brain\033[0m")
+        os.system('exit')
+        sys.exit()
 
 main()

@@ -6,7 +6,9 @@ Create list anime in txt.
 - This tool used to create list anime in .txt.
 
 # Platform
-  can be use in linux and termux.
+  can be use in windows, linux and termux.
+  use ls.py for termux and linux.
+  use ls2.py for windows.
 
 # Installation
    Preferably, you can download AniLs by cloning the [Git](https://github.com/Rikazikirin/AniLs.git) repository:
